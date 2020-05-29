@@ -22,18 +22,18 @@ def music(bot: Bot, update: Update, args):
 	if video_id.find('youtu.be') != -1:
 		index = video_id.rfind('/') + 1
 		video_id = video_id[index:][:11]
-		message.reply_text("Please wait...\ndownloading audio.")
+		message.reply_text("Please wait...⏳️ \ndownloading audio.")
 
 	elif video_id.find('youtube') != -1:
 		index = video_id.rfind('?v=') + 3
 		video_id = video_id[index:][:11]
-		message.reply_text("Please wait...\downloading audio.")
+		message.reply_text("Please wait...⏳️ \downloading audio.")
 
 	elif not video_id.find('youtube') != -1:
-		message.reply_text("Please provide me youtube link")
+		message.reply_text("Please use youtube link")
 
 	elif not video_id.find('youtu.be') != -1:
-		message.reply_text("Please provide me youtube link")
+		message.reply_text("Please use youtube link")
 		
 
         
@@ -58,7 +58,7 @@ def music(bot: Bot, update: Update, args):
 		if not json2_response['error']:
 			payload = json2_response['payload']
 
-			info = '*{0}* \nUploaded by @AnonymousD3061'.format(payload['fulltitle'])
+			info = '*{0}* \nUploaded by @kannappan04 🧞‍♂'.format(payload['fulltitle'])
 
 			try:
 				
